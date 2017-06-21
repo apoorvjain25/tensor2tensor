@@ -18,7 +18,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import cPickle
+try:
+  import cPickle
+except ImportError:
+  import pickle as cPickle
 import gzip
 import io
 import json
