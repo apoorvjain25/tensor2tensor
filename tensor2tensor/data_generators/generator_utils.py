@@ -22,7 +22,12 @@ import gzip
 import io
 import os
 import tarfile
-import urllib
+import sys
+if sys.version_info[0] >= 3:
+  import urllib.request as urllib
+else:
+  import urllib
+
 
 # Dependency imports
 
